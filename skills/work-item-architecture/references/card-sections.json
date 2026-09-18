@@ -1,0 +1,33 @@
+{
+  "_comment": "Single source of truth for build card structure. The lint script (scripts/lint_build_cards.py) loads this file; the human-readable table in references/build-card-template.md mirrors it. Edit HERE, then update the template table to match.",
+  "banned": [
+    ["\\bas appropriate\\b", "as appropriate"],
+    ["\\bappropriately\\b", "appropriately"],
+    ["\\bas needed\\b", "as needed"],
+    ["\\bif necessary\\b", "if necessary"],
+    ["\\bTBD\\b", "TBD"],
+    ["\\bTODO\\b", "TODO"],
+    ["\\betc\\b", "etc"],
+    ["\\band so on\\b", "and so on"],
+    ["\\bfor example\\b", "for example"],
+    ["\\be\\.g\\.", "e.g."],
+    ["\\bconsider\\b", "consider"],
+    ["\\bmay want\\b", "may want"],
+    ["\\byou could\\b", "you could"],
+    ["\\bshould probably\\b", "should probably"],
+    ["\\bsimilar to\\b", "similar to"],
+    ["\\busual pattern\\b", "usual pattern"],
+    ["\\bstandard error handling\\b", "standard error handling"],
+    ["\\bhandle errors\\b", "handle errors"]
+  ],
+  "universalSections": ["Files", "Purpose", "Security", "Test spec", "Must not", "Done when"],
+  "sectionsByType": {
+    "Behaviour": ["ApexClass", "ApexTrigger", "LWC", "Flow", "MuleApp"],
+    "Metadata spec": ["Field", "Object", "PermissionSet", "ValidationRule", "CustomMetadata", "SharingRule", "RestrictionRule"],
+    "Governor budget": ["ApexClass", "ApexTrigger", "Flow"],
+    "Data steps": ["PermissionSet"]
+  },
+  "warnSections": {
+    "Interface": ["ApexClass", "LWC"]
+  }
+}
